@@ -33,14 +33,14 @@ npm run dev
 api 
 npm run start:backend
 
-##Technologies Used
+## Technologies Used
 
-##Frontend:
+## Frontend:
 
 React: JavaScript library for building user interfaces
 CSS: Styling for the application
 
-##Backend:
+## Backend:
 
 Node.js: JavaScript runtime
 Express: Web framework for Node.js
