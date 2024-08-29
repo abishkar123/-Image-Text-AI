@@ -22,25 +22,25 @@ This is a simple web application that allows users to upload an image, ask quest
    cd image-text-ai
 
 
-# Install backend dependencies
+## Install backend dependencies
 npm i
 
-# Install frontend dependencies
+## Install frontend dependencies
 cd img-text-ai
 npm i
-#client
+client
 npm run dev 
-#api 
+api 
 npm run start:backend
 
-#Technologies Used
+##Technologies Used
 
-#Frontend:
+##Frontend:
 
 React: JavaScript library for building user interfaces
 CSS: Styling for the application
 
-#Backend:
+##Backend:
 
 Node.js: JavaScript runtime
 Express: Web framework for Node.js
