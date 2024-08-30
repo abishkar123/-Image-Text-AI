@@ -1,42 +1,60 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  /* --primary-bg-color: #efefef; */
+  --text-font:nunito;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.img-contain{
+  background-color: #ffffff82;
+  font-family: var(--text-font);
+  width: auto;
+  min-height: 90vh;
+ 
+  
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.parent-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.img-upload{
+  width:80vh;
+  min-height:70vh;
+  background-color:#fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.card {
-  padding: 2em;
+.img-box{
+  width: 70vh;
+  height: 40vh;
+  background-color: rgba(245, 245, 245, 0.333);
+  border: 2px dashed rgba(0, 0, 0, 0.194);
+
+ position: relative;
+ left: 5vh;
+}
+.img-drag-drop{
+  position: absolute;
+  left: 18vh;
+  top: 20vh
 }
 
-.read-the-docs {
-  color: #888;
-} */
+
+
+.image{
+  position: relative;
+  bottom: 20vh;
+  right: 6vh;
+  width: 50vh;
+  height: 30vh;
+}
+
+.input-content{
+  font-size: var(--text-font);
+  width: 60vh;
+  height: 6vh;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
