@@ -58,3 +58,19 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
+.button-text{
+  position: relative;
+  left:28rem;
+  bottom:3.7rem;
+}
+
+.answer{
+  font-size:14px;
+  font-family:var(--text-font);
+  padding:2rem;
+  width: auto;
+  min-height:30vh;
+  background-color: rgba(166, 155, 155, 0.03);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}

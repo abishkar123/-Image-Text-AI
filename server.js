@@ -13,7 +13,7 @@ const PORT = 8000;
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 app.use(cors());
-app.use(express.json()); // Add this line to parse JSON bodies
+app.use(express.json()); 
 
 // Configure multer storage
 const storage = multer.diskStorage({
@@ -42,7 +42,6 @@ app.post('/upload', (req, res) => {
 app.post('/gemini', async (req, res) => {
     try {
         const { message } = req.body;
-
         if (!message) {
             return res.status(400).json({ error: 'Message is required' });
         }
@@ -55,8 +54,14 @@ app.post('/gemini', async (req, res) => {
                 }
             };
         }
-
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+        const model = genAI.getGenerativeModel({
+            model: "gemini-1.5-flash-latest",
+            temperature: 0.7,  // Adjusts randomness, higher value = more random
+            max_tokens: 150,   // Limits the number of tokens in the generated response
+            top_p: 0.9,        // Nucleus sampling, consider the top p% of probability mass
+            frequency_penalty: 0.5, // Discourages repeating phrases, higher value = more penalty
+            presence_penalty: 0.3   // Encourages introducing new topics, higher value = more penalty
+        });
 
         const result = await model.generateContent([
             message,
