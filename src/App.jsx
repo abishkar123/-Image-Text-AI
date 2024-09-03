@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Container } from 'react-bootstrap';
 
+
 function App() {
   const [image, setImage] = useState(null);
   const [value, setValue] = useState("");
@@ -9,8 +10,9 @@ function App() {
   const [error, setError] = useState("");
 
   const rootUrl = process.env.NODE_ENV === "production"
-  ? "api/v1"
+  ? "https://image-to-text-ai-api.vercel.app/api/v1"
   : "http://localhost:8000/api/v1"
+  
 
   const surpriseOptions = [
     'Does the image have a whale?',
