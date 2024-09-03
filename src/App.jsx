@@ -8,6 +8,10 @@ function App() {
   const [response, setResponse] = useState("");
   const [error, setError] = useState("");
 
+  const rootUrl = process.env.NODE_ENV === "production"
+  ? ""
+  : "http://localhost:8000"
+
   const surpriseOptions = [
     'Does the image have a whale?',
     'Is the image fabulously pink?',
@@ -29,7 +33,7 @@ function App() {
         method: "POST",
         body: formData,
       };
-      const response = await fetch("http://localhost:8000/upload", options);
+      const response = await fetch(`${rootUrl}/upload`,options);
       const data = await response.json();
 
     } catch (error) {
@@ -53,7 +57,7 @@ function App() {
         },
       };
 
-      const response = await fetch("http://localhost:8000/gemini", options);
+      const response = await fetch(`${rootUrl}/gemini`, options);
     
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
