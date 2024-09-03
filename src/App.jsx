@@ -9,8 +9,8 @@ function App() {
   const [error, setError] = useState("");
 
   const rootUrl = process.env.NODE_ENV === "production"
-  ? "/api"
-  : "http://localhost:8000/api"
+  ? "api/v1"
+  : "http://localhost:8000/api/v1"
 
   const surpriseOptions = [
     'Does the image have a whale?',
@@ -133,7 +133,11 @@ function App() {
       </Container>
       {error && <p>{error}</p>}
       {response && <p className='answer mt-0'>
-        {response}</p>}
+        {response}
+
+    
+        
+        </p>}
     </div>
   );
 }
