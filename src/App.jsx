@@ -33,6 +33,7 @@ function App() {
     try {
       const options = {
         method: "POST",
+        mode: 'no-cors',
         body: formData,
       };
       const response = await fetch(`${rootUrl}/upload`,options);
