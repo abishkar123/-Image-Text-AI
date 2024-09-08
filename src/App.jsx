@@ -54,31 +54,48 @@ function App() {
       setError("Error! You must upload an image.");
       return;
     }
-
+  
     try {
+      // Upload the image first to get the imageId
+      const formData = new FormData();
+      formData.append('file', image);
+  
+      const uploadResponse = await fetch(`${rootUrl}/upload`, {
+        method: "POST",
+        body: formData,
+      });
+  
+      if (!uploadResponse.ok) {
+        throw new Error(`Image upload failed! Status: ${uploadResponse.status}`);
+      }
+  
+      const uploadData = await uploadResponse.json();
+      const imageId = uploadData.imageId;
+  
+      // Now send the message and imageId to the Gemini API
       const options = {
         method: "POST",
-        body: JSON.stringify({ message: value }),
+        body: JSON.stringify({ message: value, imageId: imageId }),
         headers: {
           "Content-Type": "application/json",
         },
       };
-
+  
       const response = await fetch(`${rootUrl}/gemini`, options);
-    
+  
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-
+  
       const data = await response.text();
       setResponse(data);
-     
-
+  
     } catch (error) {
       console.error(error);
       setError("Something didn't work! Please try again.");
     }
   };
+  
 
   const handleOnClear = () => {
     setImage(null); 
