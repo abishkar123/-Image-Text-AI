@@ -9,11 +9,11 @@ function App() {
   const [response, setResponse] = useState("");
   const [error, setError] = useState("");
 
-  const rootUrl = "https://image-to-text-ai-api.vercel.app"
+  // const rootUrl = "https://image-to-text-ai-api.vercel.app/api/v1"
 2
-  // const rootUrl = import.meta.env.MODE === 'production' 
-  // ? import.meta.env.VITE_ROOT_API 
-  // : 'http://localhost:8000/api/v1';
+  const rootUrl = import.meta.env.MODE === 'production' 
+  ? import.meta.env.VITE_ROOT_API 
+  : 'http://localhost:8000/api/v1';
 
   const surpriseOptions = [
     'Does the image have a whale?',
@@ -35,7 +35,7 @@ function App() {
       const options = {
         method: "POST",
         body: formData,
-        mode: 'no-cors',
+        
       };
       const response = await fetch(`${rootUrl}/upload`,options);
       const data = await response.json();
