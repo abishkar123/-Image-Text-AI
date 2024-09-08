@@ -38,8 +38,11 @@ function App() {
         
       };
       const response = await fetch(`${rootUrl}/upload`,options);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
       const data = await response.json();
-
+      console.log(data)
     } catch (error) {
       console.error(error)
       setError("Please check your code");
@@ -69,7 +72,7 @@ function App() {
 
       const data = await response.text();
       setResponse(data);
-      console.log(data)
+     
 
     } catch (error) {
       console.error(error);
