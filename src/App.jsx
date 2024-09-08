@@ -35,6 +35,7 @@ function App() {
       const options = {
         method: "POST",
         body: formData,
+        mode: 'no-cors',
       };
       const response = await fetch(`${rootUrl}/upload`,options);
       const data = await response.json();
