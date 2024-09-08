@@ -3,6 +3,7 @@
 This is a simple web application that allows users to upload an image, ask questions about it, and receive responses based on the content of the image. The project is built using React for the frontend and a Node.js/Express server for handling image uploads and processing.
 
 ## Demo
+![Project Screenshot](img/demo.png)
 
 (Provide a link to your deployed app if available, or a gif/screenshot of your app in action.)
 
