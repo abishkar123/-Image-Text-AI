@@ -14,11 +14,7 @@ function App() {
   ? import.meta.env.VITE_ROOT_API 
   : 'http://localhost:8000/api/v1';
 
-  const surpriseOptions = [
-    'Does the image have a whale?',
-    'Is the image fabulously pink?',
-    'Does the image have puppies?'
-  ];
+ 
 
   const surprise = () => {
     const randomValue = surpriseOptions[Math.floor(Math.random() * surpriseOptions.length)];
@@ -55,7 +51,6 @@ function App() {
     }
   
     try {
-      // Upload the image first to get the imageId
       const formData = new FormData();
       formData.append('file', image);
   
