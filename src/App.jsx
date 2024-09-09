@@ -14,12 +14,6 @@ function App() {
   ? import.meta.env.VITE_ROOT_API 
   : 'http://localhost:8000/api/v1';
 
- 
-
-  const surprise = () => {
-    const randomValue = surpriseOptions[Math.floor(Math.random() * surpriseOptions.length)];
-    setValue(randomValue);
-  };
 
   const uploadImage = async (e) => {
     const formData = new FormData();
