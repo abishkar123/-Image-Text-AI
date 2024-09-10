@@ -79,20 +79,20 @@
 }
 @media only screen and (max-width: 700px) {
   .img-upload{
-    width:65vh;
+    width:60vh;
     min-height:50vh;
   }
   .img-box{
-    width: 55vh;
+    width: 50vh;
     height: 40vh;
   
    position: relative;
-   left: 5vh;
+   left: 4vh;
   }
 
   .text-position{
     position: relative;
-    right:6vh;
+    right:7vh;
     font-size: smaller;
   }
   .icons{
@@ -104,7 +104,7 @@
    }
    .button-text{
   
-    left:23rem;
+    left:21.5rem;
    
   }
 
