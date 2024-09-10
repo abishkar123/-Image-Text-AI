@@ -10,8 +10,8 @@ function App() {
   const [error, setError] = useState("");
 
 
-  const rootUrl = import.meta.env.MODE === 'production' 
-  ? import.meta.env.VITE_ROOT_API 
+  const rootUrl = import.meta.env.MODE === 'production'
+  ? import.meta.env.VITE_ROOT_API
   : 'http://localhost:8000/api/v1';
 
 
