@@ -7,9 +7,7 @@
   background-color: #ffffff82;
   font-family: var(--text-font);
   width: auto;
-  min-height: 90vh;
- 
-  
+  min-height: 90vh;  
 }
 .parent-container {
   display: flex;
@@ -74,3 +72,41 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
+
+.icons{
+  position: relative;
+  left: 15vh;
+}
+@media only screen and (max-width: 700px) {
+  .img-upload{
+    width:65vh;
+    min-height:50vh;
+  }
+  .img-box{
+    width: 55vh;
+    height: 40vh;
+  
+   position: relative;
+   left: 5vh;
+  }
+
+  .text-position{
+    position: relative;
+    right:6vh;
+    font-size: smaller;
+  }
+  .icons{
+    position: relative;
+    left: 7vh;
+  }
+  .input-content{
+    width: 45vh; 
+   }
+   .button-text{
+  
+    left:23rem;
+   
+  }
+
+}
+
